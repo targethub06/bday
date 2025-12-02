@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <script src="/_sdk/element_sdk.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @view-transition {
+            navigation: auto;
+        }
+    </style>
+    <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+    <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="calculator-container">
+        <header class="calculator-header">
+            <h1 class="calculator-title" id="calculatorTitle">Calculator</h1>
+        </header>
+        <div class="display-container">
+            <div class="expression" id="expression"></div>
+            <div class="display" id="display">
+                0
+            </div>
+        </div>
+        <div class="mode-selector"><button class="mode-btn active" data-mode="basic">Basic</button> <button
+                class="mode-btn" data-mode="scientific">Scientific</button> <button class="mode-btn"
+                data-mode="advanced">Advanced</button>
+        </div>
+        <div class="button-grid" id="basicButtons"><button class="calc-button clear">AC</button> <button
+                class="calc-button function">⌫</button> <button class="calc-button operator">%</button> <button
+                class="calc-button operator">÷</button> <button class="calc-button function">√</button> <button
+                class="calc-button number">7</button> <button class="calc-button number">8</button> <button
+                class="calc-button number">9</button> <button class="calc-button operator">×</button> <button
+                class="calc-button function">x²</button> <button class="calc-button number">4</button> <button
+                class="calc-button number">5</button> <button class="calc-button number">6</button> <button
+                class="calc-button operator">−</button> <button class="calc-button function">xⁿ</button> <button
+                class="calc-button number">1</button> <button class="calc-button number">2</button> <button
+                class="calc-button number">3</button> <button class="calc-button operator">+</button> <button
+                class="calc-button function">1/x</button> <button class="calc-button number">0</button> <button
+                class="calc-button number">.</button> <button class="calc-button function">π</button> <button
+                class="calc-button equals">=</button>
+        </div>
+        <div class="advanced-panel" id="advancedPanel">
+            <div class="function-category">
+                <div class="category-title">
+                    Trigonometry
+                </div>
+                <div class="function-buttons"><button class="calc-button function">sin</button> <button
+                        class="calc-button function">cos</button> <button class="calc-button function">tan</button>
+                    <button class="calc-button function">asin</button> <button
+                        class="calc-button function">acos</button> <button class="calc-button function">atan</button>
+                </div>
+            </div>
+            <div class="function-category">
+                <div class="category-title">
+                    Advanced Functions
+                </div>
+                <div class="function-buttons"><button class="calc-button function">log</button> <button
+                        class="calc-button function">ln</button> <button class="calc-button function">e</button> <button
+                        class="calc-button function">eˣ</button> <button class="calc-button function">10ˣ</button>
+                    <button class="calc-button function">x!</button> <button class="calc-button function">|x|</button>
+                    <button class="calc-button function">∛</button>
+                </div>
+            </div>
+            <div class="function-category">
+                <div class="category-title">
+                    Operations
+                </div>
+                <div class="function-buttons"><button class="calc-button function">(</button> <button
+                        class="calc-button function">)</button> <button class="calc-button function">DEG</button>
+                    <button class="calc-button function">RAD</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
